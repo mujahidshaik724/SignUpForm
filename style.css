@@ -1,0 +1,202 @@
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image section styling */
+.image {
+    flex: 0.4; /* 40% width */
+    position: relative;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Odin logo section */
+.odin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Covers the whole .image div */
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Full transparent overlay */
+    color: white;
+    font-family: 'Norse Bold', sans-serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-top: 110px;
+}
+
+.odin img {
+    height: 90px;
+    width: auto;
+}
+
+/* Main content section styling */
+.main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+/* Intro text */
+.intro-text {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Grouping form fields on the same line */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels & Inputs */
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Updated input field styling with shadow border */
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background: #fff;
+}
+
+/* Normal State */
+.form-group input {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #E5E7EB; /* Default border color */
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Active (Focused) State */
+.form-group input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+
+/* Adjusted button styling */
+form button {
+    padding: 10px 20px;
+    background: #596D48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: fit-content; /* Make the button shrink to its content */
+    text-align: left; /* Align text to the left */
+}
+
+
+form button:hover {
+    background: #4b5d3e;
+}
+
+.form-group input {
+    width: 80%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+/* Link styling */
+.login-text {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.login-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image {
+        flex: none;
+        height: 200px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+/* Custom font */
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('./Assets/Norse-Bold.otf') format('opentype');
+}
